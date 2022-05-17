@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="accordian.css">
+    <title>Accordian in javascript</title>
+</head>
+<body>
+    <h1 style="text-align: center; margin: 10px;">Accordian in Javascript</h1>
+    <div class="main">
+        <div class="box">
+            <p class="number">01</p>
+            <h3> My Name is Sneha  </h3>
+            <div class="iconopen">&#43;</div>
+            <div class="iconclose">&#215;</div>
+            <div class="hidden-box">
+                <p>Lorem ipsum dolor, sit amet
+                    consectetur adipisicing elit. Fugit
+                    officiis adipisci, aperiam magni
+                    ullam quisquam optio cum sunt ratione ea.
+                </p>
+                <ul>
+                    <li>Lorem ipsum, dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                </ul>
+            </div>
+            
+        </div>
+
+        <div class="box">
+         <p class="number">02</p>
+         <h3> this is sneha mishra  </h3>
+         <div class="iconopen">&#43;</div>
+         <div class="iconclose">&#215;</div>
+         <div class="hidden-box">
+            <p>Lorem ipsum dolor, sit amet
+                consectetur adipisicing elit. Fugit
+                officiis adipisci, aperiam magni
+                ullam quisquam optio cum sunt ratione ea.
+            </p>
+            <ul>
+                <li>Lorem ipsum, dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+            </ul>
+        </div>
+        </div>
+
+        <div class="box">
+            <p class="number">03</p>
+            <h3> Hi I'm sneha Mishra </h3>
+            <div class="iconopen">&#43;</div>
+            <div class="iconclose">&#215;</div>
+            <div class="hidden-box">
+                <p>Lorem ipsum dolor, sit amet
+                    consectetur adipisicing elit. Fugit
+                    officiis adipisci, aperiam magni
+                    ullam quisquam optio cum sunt ratione ea.
+                </p>
+                <ul>
+                    <li>Lorem ipsum, dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+      //////////////////Javascript//////////////////////
+
+      const ourItemdiv = document.getElementsByClassName("box");
+      const openIcon = document.getElementsByClassName("iconopen");
+      const closeIcon = document.getElementsByClassName("iconclose");
+
+      console.log(ourItemdiv);
+
+      for(let i=0; i < ourItemdiv.length; i++){
+
+         closeIcon[i].style.display = "none";
+          ourItemdiv[i].addEventListener("click", ()=>{
+             const result =  ourItemdiv[i].classList.toggle("active");
+
+             if(result){
+                closeIcon[i].style.display = "block";
+                openIcon[i].style.display = "none";
+             }else{
+                closeIcon[i].style.display = "none";
+                openIcon[i].style.display = "block";
+             }
+          });
+      }
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
